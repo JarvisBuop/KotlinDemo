@@ -1,14 +1,41 @@
 apply plugin: 'com.android.application'
 
+
+/**
+ //❤设置个人的隐私信息属性,防于local.properties中;❤
+ */
+Properties properties = new Properties();
+properties.load(project.rootProject.file("local.properties").newDataInputStream());
+
+//设置git次数为版本号;
+//def static gitVersion = cmd.execute().text.trim().toInteger()
+def static getGitVersion() {
+    def cmd = 'git rev-list HEAD --count'
+    try {
+        return cmd.execute().text.trim().toInteger()
+    } catch (Throwable th) {
+        return "";
+    }
+}
+
+def static getBuildTime() {
+    try {
+        return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"));
+    } catch (Throwable th) {
+        return new Date().toLocaleString();
+    }
+}
+
+
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.3"
+    compileSdkVersion rootProject.ext.dependencies.compileSdkVersion
+    buildToolsVersion rootProject.ext.dependencies.buildToolsVersion
     defaultConfig {
         applicationId "com.jarvisdong.kotlindemo"
-        minSdkVersion 15
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.dependencies.minSdkVersion
+        targetSdkVersion rootProject.ext.dependencies.targetSdkVersion
+        versionCode getGitVersion()
+        versionName rootProject.ext.dependencies.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
