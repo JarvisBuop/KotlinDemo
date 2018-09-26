@@ -86,11 +86,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-
     implementation rootProject.ext.dependencies.appcompatV7
     implementation rootProject.ext.dependencies.constraint_layout
-
+    implementation rootProject.ext.dependencies.kotlin_stdlib
 }
 repositories {
     mavenCentral()

@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">KotlinDemo</string>
+    <string name="test_str1">username: </string>
+    <string name="test_str2">password: </string>
+    <string name="test_str3">weight left</string>
+    <string name="test_str4">weight left</string>
+    <string name="test_str5">weight left</string>
+    <string name="test_str6">weight left</string>
+    <string name="test_str7">weight left</string>
+    <string name="test_str8">weight left</string>
+    <string name="test_str9">weight left</string>
+    <string name="test_str10">weight left</string>
+    <string name="test_str11">weight left</string>
+    <string name="test_str12">weight left</string>
+    <string name="test_str13">weight left</string>
+    <string name="test_str14">weight left</string>
+    <string name="test_str15">weight left</string>
 </resources>
