@@ -10,9 +10,11 @@ import com.jarvisdong.kotlindemo.App
  * 静态方法;
  *
  */
-class DemoUtils{
+class DemoUtils {
+    //伴生对象,常用来作为工具类 static方法;
+
     companion object {
-        fun getStringId(intRes : Int): String{
+        fun getStringId(intRes: Int): String {
             return App.getApp().getString(intRes)
         }
 
