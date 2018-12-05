@@ -1,20 +1,21 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 apply from: "config.gradle"
+
 buildscript {
-    ext.gradle_version ="3.0.1"
-    ext.kotlin_version ="1.2.71"
+    ext.gradle_version = "3.0.1"
+    ext.kotlin_version = "1.2.71"
 
     repositories {
         google()
         jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-
+        //kotlin_plat_common  : "org.jetbrains.kotlin:kotlin-platform-common:$kotlin_version",
+        //kotlin_plat_android : "org.jetbrains.kotlin:kotlin-platform-android:$kotlin_version",
     }
 }
 
@@ -22,6 +23,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
     }
 }
 

@@ -1,6 +1,6 @@
 package com.jarvisdong.kotlindemo
 
-import android.app.Application
+import com.jarvisdong.kit.baseui.BaseApp
 
 /**
  * Created by JarvisDong on 2018/9/26.
@@ -9,16 +9,9 @@ import android.app.Application
  * application;
  */
 
-class App : Application() {
-    companion object {
-        private var instance: App?= null
-        fun getApp(): App {
-           return instance!!
-        }
-    }
+class App : BaseApp() {
 
     override fun onCreate() {
         super.onCreate()
-        instance = this
     }
 }

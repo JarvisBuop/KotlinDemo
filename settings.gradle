@@ -1,2 +1,2 @@
 //rootProject.name = "1111"
-include ':app'
+include ':app', ':kit'

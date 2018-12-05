@@ -10,8 +10,9 @@ ext {
 
     dependencyVersion = [
             supportLibraryVersion: "27.1.1",
-            constraintVersion: "1.1.2",
-            kotlin_version: "1.2.71",
+            constraintVersion    : "1.1.2",
+            multidex_version     : "1.0.0",
+
     ]
 
     dependencies = [
@@ -24,14 +25,11 @@ ext {
             support_palette     : "com.android.support:palette-v7:${dependencyVersion.supportLibraryVersion}",
             constraint_layout   : "com.android.support.constraint:constraint-layout:${dependencyVersion.constraintVersion}",
 
-            kotlin_stdlib : "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version",
-//    compile "org.jetbrains.kotlin:kotlin-platform-common:$kotlin_version"
-//    compile "org.jetbrains.kotlin:kotlin-platform-android:$kotlin_version"
+            kotlin_stdlib       : "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version",
+            kotlin_stdlib_jre8       : "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version",
+            kotlin_stdlib_common: "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version",
 
-
-//            //百分比布局;
-//            compile "com.android.support:percent:$rootProject.supportLibraryVersion"
 //            //分包;
-//            compile "com.android.support:multidex:$rootProject.multidexVersion"
+            android_multidex    : "com.android.support:multidex:${dependencyVersion.multidex_version}",
     ]
 }
