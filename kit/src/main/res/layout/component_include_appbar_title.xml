@@ -1,59 +1,45 @@
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:id="@+id/app_bar_design"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:background="@color/colorToolbar"-->
-    <!--android:theme="@style/AppTheme.AppBarOverlay"-->
-    <!--android:transitionName="@string/transitioName_appbar"-->
-    <!--app:elevation="0dp">-->
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_bar_design"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:elevation="0dp">
 
-    <!--<android.support.v7.widget.Toolbar-->
-        <!--android:id="@+id/toolbar"-->
-        <!--style="@style/toolbar"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="?attr/actionBarSize"-->
-        <!--app:contentInsetLeft="0dp"-->
-        <!--app:contentInsetStart="0dp"-->
-        <!--app:layout_scrollFlags="enterAlways|scroll"-->
-        <!--app:popupTheme="@style/AppTheme.PopupOverlay">-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="enterAlways|scroll">
 
-        <!--<RelativeLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_height="100dp">
 
-            <!--<TextView-->
-                <!--android:id="@+id/bar_left"-->
-                <!--style="@style/toolbar_side_text"-->
-                <!--android:drawableLeft="@mipmap/ic_arrow_left"-->
-                <!--android:drawablePadding="0dp"-->
-                <!--android:paddingLeft="12dp"-->
-                <!--android:paddingRight="12dp" />-->
+            <TextView
+                android:id="@+id/bar_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="left" />
 
-            <!--&lt;!&ndash;android:src="@mipmap/ic_cancel" &ndash;&gt;-->
+            <TextView
+                android:id="@+id/bar_title"
+                app:
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title" />
 
-            <!--<TextView-->
-                <!--android:id="@+id/bar_right"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:layout_centerVertical="true"-->
-                <!--android:drawablePadding="0dp"-->
-                <!--android:paddingLeft="12dp"-->
-                <!--android:paddingRight="12dp"-->
-                <!--android:visibility="gone" />-->
+            <TextView
+                android:id="@+id/bar_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="right" />
 
-            <!--<TextView-->
-                <!--android:id="@+id/bar_title"-->
-                <!--android:layout_centerInParent="true"-->
-                <!--android:ellipsize="end"-->
-                <!--android:gravity="center"-->
-                <!--android:maxWidth="250dp"-->
-                <!--android:paddingLeft="10dp"-->
-                <!--android:paddingRight="10dp"-->
-                <!--tools:text="234234234234234234234234234234234234234234" />-->
+        </android.support.design.widget.CoordinatorLayout>
+    </android.support.v7.widget.Toolbar>
 
-        <!--</RelativeLayout>-->
-    <!--</android.support.v7.widget.Toolbar>-->
-
-<!--</android.support.design.widget.AppBarLayout>-->
+</android.support.design.widget.AppBarLayout>
