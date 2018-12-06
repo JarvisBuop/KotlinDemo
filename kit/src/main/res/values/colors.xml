@@ -40,6 +40,7 @@
     <color name="orange_alpha">#EB6100</color>
     <color name="blue_alpha">#00a0e9</color>
     <color name="yellow_alpha">#f5bba3</color>
+    <color name="black_alpha">#90000000</color>
     <color name="teal">#00796B</color>
     <color name="brown">#8D6E63</color>
     <color name="grey">#607D8B</color>
@@ -74,6 +75,7 @@
     <color name="split_line_grey_color_d9d9d9">#D9D9D9</color>
     <color name="gray7">#c5c4c4</color>
     <color name="GreyWhite">#F7F7F7</color>
+    <color name="line_eee">#eee</color>
     <color name="color_register_text_normal_1ca086">#1ca086</color>
     <color name="color_register_text_normal_246b61">#246b61</color>
     <color name="color_register_text_disable_39b79d">#39b79d</color>
@@ -95,4 +97,12 @@
 
     <color name="color_black_CC000000">#CC000000</color>
     <color name="color_blue_FF2084FF">#FF2084FF</color>
+
+    <color name="text_second_color">#2A2A2A</color>
+    <color name="text_thired_color">#727272</color>
+    <color name="text_four_color">#ccc</color>
+    <color name="text_five_color">#999</color>
+    <color name="text_six_color">#333</color>
+    <color name="text_seven_color">#666</color>
+
 </resources>

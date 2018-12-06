@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_bottom_btns"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_gravity="bottom"
+    android:visibility="gone"
+    app:layout_behavior="com.jarvisdong.kit.behavior.ButtonBehavior"
+    app:target_dependcy="@+id/app_bar_design"
+    tools:visibility="visible">
+
+    <View style="@style/horizontal_line_px" />
+
+    <!-- 完成-->
+    <TextView
+        android:id="@+id/add_mater_forward"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/rect_white_bg"
+        android:gravity="center"
+        android:textColor="@color/text_second_color"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_percent="0.33"
+        tools:text="@string/common_forward" />
+
+    <TextView
+        android:id="@+id/add_mater_complete"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/rect_blue_bg"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.33"
+        tools:text="@string/common_confirm" />
+
+    <!--下一条-->
+    <TextView
+        android:id="@+id/add_mater_next"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/rect_white_bg"
+        android:gravity="center"
+        android:textColor="@color/text_second_color"
+        android:textSize="14sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.33"
+        tools:text="@string/common_next" />
+</android.support.constraint.ConstraintLayout>

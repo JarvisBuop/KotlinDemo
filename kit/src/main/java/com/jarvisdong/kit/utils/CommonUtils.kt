@@ -12,7 +12,7 @@ import com.jarvisdong.kit.baseui.BaseApp
  * 静态方法;
  *
  */
-class DemoUtils {
+class CommonUtils {
     //伴生对象,常用来作为工具类 static方法;
 
     companion object {

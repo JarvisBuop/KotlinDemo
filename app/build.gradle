@@ -72,10 +72,10 @@ android {
 //        }
 //    }
 
-    //kotlin 实验性功能;
-//    androidExtensions {
-//        experimental = true
-//    }
+    //kotlin 实验性功能;(在引用其他module中,扩展类会出现Unresolved reference:问题,使用以下解决)
+    androidExtensions {
+        experimental = true
+    }
 }
 
 
