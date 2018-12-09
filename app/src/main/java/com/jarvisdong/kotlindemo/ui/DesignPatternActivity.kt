@@ -2,20 +2,23 @@ package com.jarvisdong.kotlindemo.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.BottomSheetBehavior
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
-import com.jarvisdong.kit.ActBottomType
 import com.jarvisdong.kit.baseui.BaseActivity
 import com.jarvisdong.kotlindemo.R
 import kotlinx.android.synthetic.main.component_include_list_swipe.*
 import kotlinx.android.synthetic.main.item_common.view.*
 
-class MainActivity : BaseActivity() {
-    var mDataList: ArrayList<Pair<Int, String>> = ArrayList()
+/**
+ * Created by JarvisDong on 2018/12/9.
+ * @Description:
+ * @see:
+ */
+class DesignPatternActivity : BaseActivity() {
+    var mDataList : ArrayList<Any>? = null
 
     override fun getViewStubId(): Int {
         return R.layout.component_include_list_swipe
@@ -26,36 +29,17 @@ class MainActivity : BaseActivity() {
     }
 
     override fun customOperate(savedInstanceState: Bundle?) {
-        initView()
-
-        var index = 0
-        mDataList.add(Pair(index++, "约束布局 constraint layout demo >>"))
-        mDataList.add(Pair(index++, "面向对象六大原则(solid五大原则) >> "))
-        mDataList.add(Pair(index++, "23种设计模式简介 >> "))
-        common_recyclerview.adapter.notifyDataSetChanged()
+        initRecyclerView()
+        doPost()
     }
 
-    /**
-     * 选择使用不同底部;
-     */
-    override fun setBottomType(): Int {
-        return ActBottomType.ACT_BOTTOM_BTNS
+    private fun doPost() {
+
     }
 
-    private fun initView() {
-        initTitle("current title")
-        getLeftView().setOnClickListener {
-            if (getBottomType() == ActBottomType.ACT_BOTTOM_SHARE) {
-                if (bottomSheetBehavior?.state != BottomSheetBehavior.STATE_EXPANDED) {
-                    bottomSheetBehavior?.state = BottomSheetBehavior.STATE_EXPANDED
-                } else {
-                    bottomSheetBehavior?.setState(BottomSheetBehavior.STATE_HIDDEN)
-                }
-            }
-        }
+    private fun initRecyclerView() {
+        mDataList = ArrayList()
         common_swipe.setOnRefreshListener {
-            mDataList.add(0, Pair<Int, String>(mDataList.size + 1, "content00"))
-            common_recyclerview.adapter.notifyItemInserted(0)
             common_swipe.setRefreshing(false)
         }
         common_recyclerview.layoutManager = LinearLayoutManager(mContext)
@@ -67,10 +51,8 @@ class MainActivity : BaseActivity() {
 
         override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
             if (holder is MyViewHolder) {
-                var obj = mDataList.get(position) as Pair<Int, String>
+                var obj = mDataList!!.get(position) as Pair<Int, String>
                 holder.apply {
-                    //使用java方式转换数据;
-//                    java.lang.String.valueOf(obj.first)
                     holder.itemView.item_title.setText(obj.first.toString())
                     holder.itemView.item_content.setText(obj.second)
                     holder.itemView.setOnClickListener { null }
@@ -104,7 +86,7 @@ class MainActivity : BaseActivity() {
         }
 
         override fun getItemCount(): Int {
-            return mDataList.size
+            return mDataList!!.size
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

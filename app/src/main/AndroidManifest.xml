@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.LayoutDemoActivity" />
+        <activity android:name=".ui.DesignPatternActivity" />
 
     </application>
 

@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/img_main"
-        android:layout_width="@dimen/dimen_nor_80dp"
-        android:layout_height="@dimen/dimen_nor_80dp"
+        android:layout_width="@dimen/dimen_nor_60dp"
+        android:layout_height="@dimen/dimen_nor_60dp"
         android:src="@mipmap/icon_color_car"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
