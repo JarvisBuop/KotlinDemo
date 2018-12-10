@@ -3,11 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KotlinDemo.iml" filepath="$PROJECT_DIR$/KotlinDemo.iml" />
-      <module fileurl="file://D:\MyAsProject\KotlinDemo\KotlinDemo.iml" filepath="D:\MyAsProject\KotlinDemo\KotlinDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\MyAsProject\KotlinDemo\app\app.iml" filepath="D:\MyAsProject\KotlinDemo\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/kit/kit.iml" filepath="$PROJECT_DIR$/kit/kit.iml" />
-      <module fileurl="file://D:\MyAsProject\KotlinDemo\kit\kit.iml" filepath="D:\MyAsProject\KotlinDemo\kit\kit.iml" />
     </modules>
   </component>
 </project>
