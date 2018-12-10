@@ -6,6 +6,9 @@ import com.jarvisdong.kit.utils.CommonUtils
 import com.jarvisdong.kotlindemo.R
 import kotlinx.android.synthetic.main.activity_layout_demo.*
 
+/**
+ * constraint
+ */
 class LayoutDemoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

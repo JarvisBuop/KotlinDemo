@@ -1,12 +1,14 @@
 package com.jarvisdong.kotlindemo.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.text.TextUtils
 import android.view.View
 import android.view.ViewGroup
+import com.jarvisdong.kit.Patterns
+import com.jarvisdong.kit.Principles
 import com.jarvisdong.kit.baseui.BaseActivity
 import com.jarvisdong.kotlindemo.R
 import kotlinx.android.synthetic.main.component_include_list_swipe.*
@@ -14,7 +16,7 @@ import kotlinx.android.synthetic.main.item_common.view.*
 
 /**
  * Created by JarvisDong on 2018/12/9.
- * @Description:
+ * @Description: design patterns
  * @see:
  */
 class DesignPatternActivity : BaseActivity() {
@@ -29,12 +31,48 @@ class DesignPatternActivity : BaseActivity() {
     }
 
     override fun customOperate(savedInstanceState: Bundle?) {
+
         initRecyclerView()
+
         doPost()
+
     }
 
     private fun doPost() {
+        mDataList!!.clear()
+        mDataList!!.add(Pair<String,String>(Principles.SRP,"单一职责原则"))
+        mDataList!!.add(Pair<String,String>(Principles.OCP,"开闭原则"))
+        mDataList!!.add(Pair<String,String>(Principles.LSP,"里氏替换原则"))
+        mDataList!!.add(Pair<String,String>(Principles.DIP,"依赖倒置原则"))
+        mDataList!!.add(Pair<String,String>(Principles.ISP,"接口隔离原则"))
+        mDataList!!.add(Pair<String,String>(Principles.LKP,"最少知识原则"))
+        mDataList!!.add(Pair<String,String>(Principles.LKP,"最少知识原则"))
+        mDataList!!.add(Pair<String,String>("",""))
+        mDataList!!.add(Pair<String,String>(Patterns.SINGLETON,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.BUILDER,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.PROTOTYPE,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.FACTORY,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.ABSTRACT_FACTORY,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.STRAGETY,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.STATE,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.ITERATOR_HANDLER,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.INTERPRETER,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.COMMAND,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.OBSERVER,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.MEMENTO,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.ITERATOR,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.TEMPLATE,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.VISITOR,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.MEDIATOR,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.PROXY,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.COMPOSITE,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.ADAPTER,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.DECORATOR,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.FLYWEIGHT,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.FACADE,"单例模式"))
+        mDataList!!.add(Pair<String,String>(Patterns.BRIDGE,"单例模式"))
 
+        common_recyclerview.adapter.notifyDataSetChanged()
     }
 
     private fun initRecyclerView() {
@@ -49,39 +87,25 @@ class DesignPatternActivity : BaseActivity() {
 
     inner class MyAdapter : RecyclerView.Adapter<MyViewHolder>() {
 
-        override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-            if (holder is MyViewHolder) {
-                var obj = mDataList!!.get(position) as Pair<Int, String>
-                holder.apply {
-                    holder.itemView.item_title.setText(obj.first.toString())
-                    holder.itemView.item_content.setText(obj.second)
-                    holder.itemView.setOnClickListener { null }
-                    if (obj.first == 0) {
-                        //匿名函数方式
-//                        holder.itemView.setOnClickListener(View.OnClickListener {
-//                            v:View -> nextAct(v)
-//                        })
-
-                        //最后一个参数是函数类型,可省略圆括号
-                        holder.itemView.setOnClickListener { v: View ->
-                            nextAct(obj.first, v)
-                        }
-                    }
-                }
-            }
+        override fun getItemViewType(position: Int): Int {
+            return super.getItemViewType(position)
         }
 
-        private fun nextAct(type: Int, v: View) {
-            var intent: Intent? = null
-            when (type) {
-                0 -> intent = Intent(mContext, LayoutDemoActivity::class.java)
-                1, 2 -> {
-                    intent = Intent(mContext, DesignPatternActivity::class.java)
-                    intent.putExtra("type", type)
+        override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+            if (holder is MyViewHolder) {
+                var obj = mDataList!!.get(position) as Pair<String, String>
+                holder.apply {
+                    if(TextUtils.isEmpty(obj.first )&& TextUtils.isEmpty(obj.second)){
+                        holder.itemView.img_main.visibility = View.GONE
+                        holder.itemView.img_arrow.visibility = View.GONE
+                    }else{
+                        holder.itemView.img_main.visibility = View.VISIBLE
+                        holder.itemView.img_arrow.visibility = View.VISIBLE
+                    }
+                    holder.itemView.item_title.setText(obj.first)
+                    holder.itemView.item_content.setText(obj.second)
+                    holder.itemView.setOnClickListener { null }
                 }
-            }
-            intent?.let {
-                startActivity(it)
             }
         }
 

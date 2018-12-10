@@ -73,17 +73,14 @@ class MainActivity : BaseActivity() {
 //                    java.lang.String.valueOf(obj.first)
                     holder.itemView.item_title.setText(obj.first.toString())
                     holder.itemView.item_content.setText(obj.second)
-                    holder.itemView.setOnClickListener { null }
-                    if (obj.first == 0) {
-                        //匿名函数方式
+                    //匿名函数方式
 //                        holder.itemView.setOnClickListener(View.OnClickListener {
 //                            v:View -> nextAct(v)
 //                        })
 
-                        //最后一个参数是函数类型,可省略圆括号
-                        holder.itemView.setOnClickListener { v: View ->
-                            nextAct(obj.first, v)
-                        }
+                    //最后一个参数是函数类型,可省略圆括号
+                    holder.itemView.setOnClickListener { v: View ->
+                        nextAct(obj.first, v)
                     }
                 }
             }
