@@ -7,9 +7,8 @@ import android.support.v7.widget.RecyclerView
 import android.text.TextUtils
 import android.view.View
 import android.view.ViewGroup
-import com.jarvisdong.kit.Patterns
-import com.jarvisdong.kit.Principles
-import com.jarvisdong.kit.baseui.BaseActivity
+import com.jarvisdong.kotlindemo.utils.Patterns
+import com.jarvisdong.kotlindemo.utils.Principles
 import com.jarvisdong.kotlindemo.R
 import kotlinx.android.synthetic.main.component_include_list_swipe.*
 import kotlinx.android.synthetic.main.item_common.view.*

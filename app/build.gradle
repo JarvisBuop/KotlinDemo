@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-kapt'
 
 /**
  //❤设置个人的隐私信息属性,防于local.properties中;❤
@@ -29,15 +30,15 @@ def static getBuildTime() {
 
 
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion rootProject.ext.androidVersion.compileSdkVersion
+    buildToolsVersion rootProject.ext.androidVersion.buildToolsVersion
     defaultConfig {
         applicationId "com.jarvisdong.kotlindemo"
-        minSdkVersion rootProject.ext.android.minSdkVersion
-        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        minSdkVersion rootProject.ext.androidVersion.minSdkVersion
+        targetSdkVersion rootProject.ext.androidVersion.targetSdkVersion
 
         versionCode getGitVersion()
-        versionName rootProject.ext.android.versionName
+        versionName rootProject.ext.androidVersion.versionName
         //3.0设置维度;
         flavorDimensions "versionCode"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -49,17 +50,17 @@ android {
         }
     }
 
-    productFlavors {
-        free {
-            applicationId 'com.jarvisdong.kotlindemo.free'
-            versionName rootProject.ext.android.versionName + '-free'
-        }
-
-        paid {
-            applicationId 'com.jarvisdong.kotlindemo.paid'
-            versionName rootProject.ext.android.versionName + '-paid'
-        }
-    }
+//    productFlavors {
+//        free {
+//            applicationId 'com.jarvisdong.kotlindemo.free'
+//            versionName rootProject.ext.android.versionName + '-free'
+//        }
+//
+//        paid {
+//            applicationId 'com.jarvisdong.kotlindemo.paid'
+//            versionName rootProject.ext.android.versionName + '-paid'
+//        }
+//    }
 //
 //    splits {
 //        // Screen density split settings
@@ -77,19 +78,15 @@ android {
     androidExtensions {
         experimental = true
     }
-
-//    kapt {
-//        generateStubs = true
-//    }
 }
 
 
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test:runner:1.0.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     compile project(path: ':kit')
 

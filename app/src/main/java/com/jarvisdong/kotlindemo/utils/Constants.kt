@@ -1,4 +1,4 @@
-package com.jarvisdong.kit
+package com.jarvisdong.kotlindemo.utils
 
 /**
  * Created by JarvisDong on 2018/12/6.

@@ -1,16 +1,17 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion rootProject.ext.androidVersion.compileSdkVersion
+    buildToolsVersion rootProject.ext.androidVersion.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion rootProject.ext.android.minSdkVersion
-        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        minSdkVersion rootProject.ext.androidVersion.minSdkVersion
+        targetSdkVersion rootProject.ext.androidVersion.targetSdkVersion
         versionCode 1
-        versionName rootProject.ext.android.versionName
+        versionName rootProject.ext.androidVersion.versionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -23,22 +24,26 @@ android {
         }
     }
 
+    androidExtensions {
+        experimental = true
+    }
+
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test:runner:1.0.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    compile rootProject.ext.dependencies.appcompatV7
-    compile rootProject.ext.dependencies.support_design
-    compile rootProject.ext.dependencies.support_recyclerview
-    compile rootProject.ext.dependencies.support_annotations
-    compile rootProject.ext.dependencies.support_cardview
+    api rootProject.ext.dependencies.appcompatV7
+    api rootProject.ext.dependencies.support_design
+    api rootProject.ext.dependencies.support_recyclerview
+    api rootProject.ext.dependencies.support_annotations
+    api rootProject.ext.dependencies.support_cardview
 
-    compile rootProject.ext.dependencies.constraint_layout
-    compile rootProject.ext.dependencies.kotlin_stdlib
-    compile rootProject.ext.dependencies.kotlin_stdlib_common
+    api rootProject.ext.dependencies.constraint_layout
+    api rootProject.ext.dependencies.kotlin_stdlib
+    api rootProject.ext.dependencies.kotlin_stdlib_common
 }
