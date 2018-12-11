@@ -1,4 +1,4 @@
-package com.jarvisdong.kit.baseui
+package com.jarvisdong.kotlindemo.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.support.design.widget.BottomSheetBehavior
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.TextView
-import com.jarvisdong.kit.ActBottomType
-import com.jarvisdong.kit.R
+import com.jarvisdong.kotlindemo.R
+import com.jarvisdong.kotlindemo.utils.ActBottomType
 import kotlinx.android.synthetic.main.component_include_bottom_btns.*
 import kotlinx.android.synthetic.main.component_include_bottom_share.*
 import kotlinx.android.synthetic.main.component_include_title.*
@@ -88,49 +88,49 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     protected fun getBottomBtnLeft(): TextView? {
-        if (bottomType != null && bottomType === ActBottomType.ACT_BOTTOM_BTNS) {
+        if (bottomType != null && bottomType == ActBottomType.ACT_BOTTOM_BTNS) {
             return add_mater_forward
         }
         return null
     }
 
     protected fun getBottomBtnMiddle(): TextView? {
-        if (bottomType != null && bottomType === ActBottomType.ACT_BOTTOM_BTNS) {
+        if (bottomType != null && bottomType == ActBottomType.ACT_BOTTOM_BTNS) {
             return add_mater_complete
         }
         return null
     }
 
     protected fun getBottomBtnRight(): TextView? {
-        if (bottomType != null && bottomType === ActBottomType.ACT_BOTTOM_BTNS) {
+        if (bottomType != null && bottomType == ActBottomType.ACT_BOTTOM_BTNS) {
             return add_mater_next
         }
         return null
     }
 
     protected fun getBottomShareWX(): View? {
-        if (bottomType != null && bottomType === ActBottomType.ACT_BOTTOM_SHARE) {
+        if (bottomType != null && bottomType == ActBottomType.ACT_BOTTOM_SHARE) {
             return img_share_wx
         }
         return null
     }
 
     protected fun getBottomShareQQ(): View? {
-        if (bottomType != null && bottomType === ActBottomType.ACT_BOTTOM_SHARE) {
+        if (bottomType != null && bottomType == ActBottomType.ACT_BOTTOM_SHARE) {
             return img_share_qq
         }
         return null
     }
 
     protected fun getBottomShareCopy(): View? {
-        if (bottomType != null && bottomType === ActBottomType.ACT_BOTTOM_SHARE) {
+        if (bottomType != null && bottomType == ActBottomType.ACT_BOTTOM_SHARE) {
             return img_share_copy
         }
         return null
     }
 
     protected fun getBottomShareCancel(): View? {
-        if (bottomType != null && bottomType === ActBottomType.ACT_BOTTOM_SHARE) {
+        if (bottomType != null && bottomType == ActBottomType.ACT_BOTTOM_SHARE) {
             return btn_share_cancel
         }
         return null

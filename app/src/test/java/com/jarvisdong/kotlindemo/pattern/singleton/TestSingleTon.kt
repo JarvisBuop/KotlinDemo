@@ -18,12 +18,18 @@ class TestSingleTon {
 
     @Test
     @Throws(Exception::class)
-    fun TestSingleFun(){
-//        var instance1 = SingletonDemo2.getInstance()
-//        var instance2 = SingletonDemo2.getInstance()
-//        Log.e("jarvis",instance1.toString()+" :: "+instance2.toString())
-//        var instance3 = SingletonDemo().getInstance()
-//        var instance4 = SingletonDemo().getInstance()
-//        Log.e("jarvis2",instance3.toString()+" :: "+instance4.toString())
+    fun TestSingleFun() {
+        var instance1 = SingletonDemo2.getInstance()
+        var instance2 = SingletonDemo2.getInstance()
+        System.out.println("jarvis1" + instance1.toString() + " :: " + instance2.toString())
+        var instance3 = SingletonDemo.getInstance()
+        var instance4 = SingletonDemo.getInstance()
+        System.out.println("jarvis2" + instance3.toString() + " :: " + instance4.toString())
+        var instance5 = SingletonDemo3.instance
+        var instance6 = SingletonDemo3.instance
+        System.out.println("jarvis3" + instance5.toString() + " :: " + instance6.toString())
+        var instance7 = SingletonDemo4
+        var instance8 = SingletonDemo4
+        System.out.println("jarvis4" + instance7.toString() + " :: " + instance8.toString())
     }
 }

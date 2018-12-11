@@ -8,8 +8,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
-import com.jarvisdong.kit.ActBottomType
-import com.jarvisdong.kit.baseui.BaseActivity
+import com.jarvisdong.kotlindemo.utils.ActBottomType
 import com.jarvisdong.kotlindemo.R
 import kotlinx.android.synthetic.main.component_include_list_swipe.*
 import kotlinx.android.synthetic.main.item_common.view.*

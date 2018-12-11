@@ -3,7 +3,7 @@ apply from: "config.gradle"
 
 buildscript {
     ext.gradle_version = "3.2.1"
-    ext.kotlin_version = "1.2.41"
+    ext.kotlin_version = "1.2.51"
 
     repositories {
         google()
@@ -13,6 +13,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
 
         //kotlin_plat_common  : "org.jetbrains.kotlin:kotlin-platform-common:$kotlin_version",
         //kotlin_plat_android : "org.jetbrains.kotlin:kotlin-platform-android:$kotlin_version",
@@ -21,9 +22,9 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
         jcenter()
         mavenCentral()
+        google()
     }
 }
 
