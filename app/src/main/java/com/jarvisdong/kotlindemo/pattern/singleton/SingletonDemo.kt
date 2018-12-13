@@ -3,6 +3,8 @@ package com.jarvisdong.kotlindemo.pattern.singleton
 /**
  * Created by JarvisDong on 2018/12/10.
  * OverView:
+ * 设计模式1--单例设计模式
+ *
  * 1.DCL 单例
  *
  */

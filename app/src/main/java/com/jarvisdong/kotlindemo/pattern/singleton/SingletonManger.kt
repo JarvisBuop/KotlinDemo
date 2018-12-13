@@ -5,7 +5,7 @@ package com.jarvisdong.kotlindemo.pattern.singleton
  * OverView:
  * 3.容器单例
  *
- * 还有一个枚举单例;
+ * 还有一个枚举单例就不举了(java中注意反序列化问题-->readResolve()方法);
  */
 class SingletonManger private constructor() {
 

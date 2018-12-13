@@ -53,12 +53,12 @@ android {
     productFlavors {
         free {
             applicationId 'com.jarvisdong.kotlindemo.free'
-            versionName rootProject.ext.android.versionName + '-free'
+            versionName rootProject.ext.androidVersion.versionName + '-free'
         }
 
         paid {
             applicationId 'com.jarvisdong.kotlindemo.paid'
-            versionName rootProject.ext.android.versionName + '-paid'
+            versionName rootProject.ext.androidVersion.versionName + '-paid'
         }
     }
 

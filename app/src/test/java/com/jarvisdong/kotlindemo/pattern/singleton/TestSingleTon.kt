@@ -8,6 +8,8 @@ import org.junit.Test
  *
  * @Description:
  * @see:
+ *
+ * 测试单例设计模式
  */
 class TestSingleTon {
 
