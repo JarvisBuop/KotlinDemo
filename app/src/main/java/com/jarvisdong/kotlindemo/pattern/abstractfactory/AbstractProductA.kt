@@ -1,0 +1,12 @@
+package com.jarvisdong.kotlindemo.pattern.abstractfactory
+
+/**
+ * Created by JarvisDong on 2018/12/15.
+ * @Description:
+ * @see:
+ *
+ * 抽象产品类
+ */
+abstract class AbstractProductA{
+    abstract fun method()
+}

@@ -16,8 +16,6 @@ class WordDocument : Cloneable {
     lateinit var mImages: ArrayList<String>
 
 
-
-
     init {
         System.out.println("------------ WordDocument 主构造函数执行 -------------")
     }

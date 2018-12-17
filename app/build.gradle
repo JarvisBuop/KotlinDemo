@@ -50,17 +50,17 @@ android {
         }
     }
 
-    productFlavors {
-        free {
-            applicationId 'com.jarvisdong.kotlindemo.free'
-            versionName rootProject.ext.androidVersion.versionName + '-free'
-        }
-
-        paid {
-            applicationId 'com.jarvisdong.kotlindemo.paid'
-            versionName rootProject.ext.androidVersion.versionName + '-paid'
-        }
-    }
+//    productFlavors {
+//        free {
+//            applicationId 'com.jarvisdong.kotlindemo.free'
+//            versionName rootProject.ext.androidVersion.versionName + '-free'
+//        }
+//
+//        paid {
+//            applicationId 'com.jarvisdong.kotlindemo.paid'
+//            versionName rootProject.ext.androidVersion.versionName + '-paid'
+//        }
+//    }
 
 //    splits {
 //        // Screen density split settings
