@@ -12,6 +12,8 @@ ext {
             supportLibraryVersion: "27.1.1",
             constraintVersion    : "1.1.2",
             multidex_version     : "1.0.0",
+            rxjava_version       : "2.1.9",
+            rxandroid_version    : "2.0.1",
 
     ]
 
@@ -31,5 +33,19 @@ ext {
 
 //            //分包;
             android_multidex    : "com.android.support:multidex:${dependencyVersion.multidex_version}",
+
+            //Rxjava
+            rxjava2_core        : "io.reactivex.rxjava2:rxjava:${dependencyVersion.rxjava_version}",
+            rxandroid_core      : "io.reactivex.rxjava2:rxandroid:${dependencyVersion.rxandroid_version}"
+//            // dependency injection
+//            implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
+//            annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+//            annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.dagger2Version"
+//            implementation "com.google.dagger:dagger-android-support:$rootProject.dagger2Version"
+//
+//            //下载框架retrofit;
+//            compile 'com.squareup.retrofit2:retrofit:2.3.0'
+//            compile 'com.squareup.retrofit2:converter-gson:2.3.0'//对序列化和反序列化的转化;
+//            compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'//对Call对象的转化为Observe对象
     ]
 }
