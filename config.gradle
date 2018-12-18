@@ -26,7 +26,7 @@ ext {
             constraint_layout   : "com.android.support.constraint:constraint-layout:${dependencyVersion.constraintVersion}",
 
             kotlin_stdlib       : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
-//            kotlin_stdlib_jdk7       : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            kotlin_stdlib_jdk7       : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
             kotlin_stdlib_common: "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version",
 
 //            //分包;
