@@ -8,8 +8,8 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
-import com.jarvisdong.kotlindemo.utils.ActBottomType
 import com.jarvisdong.kotlindemo.R
+import com.jarvisdong.kotlindemo.utils.ActBottomType
 import kotlinx.android.synthetic.main.component_include_list_swipe.*
 import kotlinx.android.synthetic.main.item_common.view.*
 
@@ -31,6 +31,7 @@ class MainActivity : BaseActivity() {
         mDataList.add(Pair(index++, "约束布局 constraint layout demo >>"))
         mDataList.add(Pair(index++, "面向对象六大原则(solid五大原则) >> "))
         mDataList.add(Pair(index++, "23种设计模式简介 >> "))
+        mDataList.add(Pair(index++, "Rxjava >> "))
         common_recyclerview.adapter.notifyDataSetChanged()
     }
 
@@ -92,6 +93,9 @@ class MainActivity : BaseActivity() {
                 1, 2 -> {
                     intent = Intent(mContext, DesignPatternActivity::class.java)
                     intent.putExtra("type", type)
+                }
+                3 -> {
+                    intent = Intent(mContext,RxJavaActivity::class.java)
                 }
             }
             intent?.let {

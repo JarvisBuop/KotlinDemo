@@ -90,6 +90,11 @@ dependencies {
 
     testCompile 'org.mockito:mockito-core:2.23.4'
 
+    implementation rootProject.ext.dependencies.rxjava2_core
+    implementation rootProject.ext.dependencies.rxandroid_core
+
+
     compile project(path: ':kit')
+
 
 }

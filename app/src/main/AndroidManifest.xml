@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".ui.LayoutDemoActivity" />
         <activity android:name=".ui.DesignPatternActivity" />
+        <activity android:name=".ui.RxJavaActivity" />
 
     </application>
 
