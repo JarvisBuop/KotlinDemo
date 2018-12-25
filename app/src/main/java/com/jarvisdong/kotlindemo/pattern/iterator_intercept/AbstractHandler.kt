@@ -1,4 +1,4 @@
-package com.jarvisdong.kotlindemo.pattern.iterator
+package com.jarvisdong.kotlindemo.pattern.iterator_intercept
 
 /**
  * Created by JarvisDong on 2018/12/16.
@@ -8,6 +8,8 @@ package com.jarvisdong.kotlindemo.pattern.iterator
  * 设计模式8--责任链模式
  *
  * 抽象处理者
+ *
+ * >>由强引用连接成一条责任链,由一个判断条件判断是否是哪个节点去处理;
  */
 abstract class AbstractHandler {
     //下一节点处理者

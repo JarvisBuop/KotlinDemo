@@ -6,6 +6,8 @@ package com.jarvisdong.kotlindemo.pattern.factory
  * @see:
  *
  * 具体的工厂类
+ *
+ * >>直接生成需要的对象即可;
  */
 class ConcreateFactory : Factory() {
     override fun <T : Product> createProduct(clazz: Class<T>): T {

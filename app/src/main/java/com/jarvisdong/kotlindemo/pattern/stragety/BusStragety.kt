@@ -5,7 +5,8 @@ package com.jarvisdong.kotlindemo.pattern.stragety
  * @Description:
  * @see:
  *
- * 具体的可替换的
+ * 具体的可替换的策略
+ *
  * 策略之一--bus
  */
 class BusStragety : CalcStragety{

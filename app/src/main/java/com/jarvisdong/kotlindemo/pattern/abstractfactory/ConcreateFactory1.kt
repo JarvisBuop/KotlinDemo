@@ -5,7 +5,7 @@ package com.jarvisdong.kotlindemo.pattern.abstractfactory
  * @Description:
  * @see:
  *
- * 具体工厂类
+ * 具体工厂类1
  */
 class ConcreateFactory1 : AbstractFactory() {
     override fun createProductB(): AbstractProductB {

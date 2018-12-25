@@ -5,7 +5,7 @@ package com.jarvisdong.kotlindemo.pattern.abstractfactory
  * @Description:
  * @see:
  *
- * 抽象产品类
+ * 抽象产品类A
  */
 abstract class AbstractProductA{
     abstract fun method()

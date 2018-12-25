@@ -3,27 +3,30 @@ package com.jarvisdong.kotlindemo.pattern.iterator
 import org.junit.Test
 
 /**
- * Created by JarvisDong on 2018/12/16.
- * @Description:
- * @see:
+ * Created by JarvisDong on 2018/12/25.
+ * OverView:
  *
- * 测试责任链模式
+ * 测试迭代器设计模式;
  */
-class TestIterator{
+class TestIterator {
 
     @Test
-    fun testIterator(){
-        var handler1 = Handler1()
-        var handler2 = Handler2()
+    fun testIterator() {
+        //两个容器;
+        var concreateAggrate1 = ConcreateAggrate1()
+        var concreateAggrate2 = ConcreateAggrate2()
 
-        //设立节点链
-        handler1.nextHander = handler2
+        //一次遍历;
+        check(concreateAggrate1.iterator())
+        System.out.println("---------------------")
+        check(concreateAggrate2.iterator())
+    }
 
-        var request1 = Request1("request1")
-        var request2 = Request2("request2")
-
-        //启动链首端
-        handler1.handleRequest(request1)
-        handler1.handleRequest(request2)
+    companion object {
+        fun check(iterator: CustomIterator<Employee>) {
+            while (iterator.hasNext()) {
+                System.out.println(" :: " + iterator.next().toString())
+            }
+        }
     }
 }

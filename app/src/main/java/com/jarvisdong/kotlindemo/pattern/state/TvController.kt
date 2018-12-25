@@ -6,6 +6,8 @@ package com.jarvisdong.kotlindemo.pattern.state
  * @see:
  *
  * 具体的状态模式中的context--电视机
+ *
+ * >>也相当于一个代理,可以直接设置state,更改所有的行为;
  */
 class TvController : PowerController{
     private lateinit var state :State

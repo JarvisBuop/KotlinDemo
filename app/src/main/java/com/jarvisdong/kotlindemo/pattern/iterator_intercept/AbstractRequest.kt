@@ -1,4 +1,4 @@
-package com.jarvisdong.kotlindemo.pattern.iterator
+package com.jarvisdong.kotlindemo.pattern.iterator_intercept
 
 /**
  * Created by JarvisDong on 2018/12/16.
@@ -6,6 +6,8 @@ package com.jarvisdong.kotlindemo.pattern.iterator
  * @see:
  *
  * 抽象请求者
+ *
+ * >>对请求,判断条件等进行封装,如果没有封装只是一个判断则为简化版本;
  */
 abstract class AbstractRequest public constructor(var obj:Any){
 

@@ -5,6 +5,8 @@ package com.jarvisdong.kotlindemo.pattern.builder
  * OverView:
  *
  * 抽象构造者类--Builder
+ *
+ * >>可快速构建对象
  */
 abstract class Builder{
     abstract fun buildBoard(board : String)

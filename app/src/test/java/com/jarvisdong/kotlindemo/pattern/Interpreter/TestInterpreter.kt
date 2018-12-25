@@ -6,12 +6,15 @@ import org.junit.Test
  * Created by JarvisDong on 2018/12/17.
  * @Description:
  * @see:
+ *
+ * 测试解释器模式
+ *
  */
-class TestInterpreter{
+class TestInterpreter {
 
     @Test
-    fun testInterpreter(){
+    fun testInterpreter() {
         var calc = Calculator("1 + 2 + 3 + 4")
-        System.out.println("result: "+calc.calculate())
+        System.out.println("result: " + calc.calculate())
     }
 }

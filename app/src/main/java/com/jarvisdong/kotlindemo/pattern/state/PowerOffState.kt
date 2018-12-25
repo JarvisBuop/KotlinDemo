@@ -5,8 +5,7 @@ package com.jarvisdong.kotlindemo.pattern.state
  * @Description:
  * @see:
  *
- * 关机状态
- * 所有方法都无效化;
+ * 在关机状态下,相应方法的实现;
  */
 class PowerOffState : State{
     override fun nextChannel() {

@@ -5,7 +5,7 @@ package com.jarvisdong.kotlindemo.pattern.state
  * @Description:
  * @see:
  *
- * 开机状态
+ * 再开机状态下,相应方法的实现;
  */
 class PowerOnState :State{
     override fun nextChannel() {

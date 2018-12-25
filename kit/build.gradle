@@ -31,20 +31,36 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    api fileTree(dir: 'libs', include: ['*.jar'])
 
-    testCompile 'junit:junit:4.12'
-    androidTestCompile 'com.android.support.test:runner:1.0.2'
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+    /**
+     * 基本功能;
+     */
     api rootProject.ext.dependencies.appcompatV7
     api rootProject.ext.dependencies.support_design
     api rootProject.ext.dependencies.support_recyclerview
     api rootProject.ext.dependencies.support_annotations
     api rootProject.ext.dependencies.support_cardview
 
-    api rootProject.ext.dependencies.constraint_layout
+    /**
+     * kotlin support
+     */
     api rootProject.ext.dependencies.kotlin_stdlib
     api rootProject.ext.dependencies.kotlin_stdlib_common
-    api rootProject.ext.dependencies.kotlin_stdlib_jdk7
+    api rootProject.ext.dependencies.kotlin_stdlib_jdk8
+
+    /**
+     * 布局
+     */
+    api rootProject.ext.dependencies.constraint_layout
+
+    /**
+     * rxjava relate
+     */
+    api rootProject.ext.dependencies.rxjava2_core
+    api rootProject.ext.dependencies.rxandroid_core
 }

@@ -7,7 +7,10 @@ package com.jarvisdong.kotlindemo.pattern.abstractfactory
  *
  * 设计模式5-抽象工厂模式
  *
- * 抽象工厂类
+ * 抽象工厂类:
+ *
+ * >>定义抽象产品的生成方法;
+ * >>多个业务可选的工厂
  */
 abstract class AbstractFactory{
     abstract fun createProductA() : AbstractProductA

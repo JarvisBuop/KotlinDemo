@@ -5,6 +5,8 @@ package com.jarvisdong.kotlindemo.pattern.builder
  * OverView:
  *
  * 统一组装过程类,负责构造产品
+ *
+ * >>一般的构造过程可忽略此类,与具体的Builder合并成一个即可;
  */
 class Director public constructor(val builder: Builder) {
 
