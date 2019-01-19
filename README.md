@@ -1,5 +1,11 @@
 # KotlinDemo for kotlin study
 
+&#x1F684;&#x1F683;&#x1F683;&#x1F683;&#x1F683;&#x1F683;&#x1F683;&#x1F409; <br/>
+是不是很好玩 ->[emoji转义字符](https://apps.timwhitlock.info/emoji/tables/unicode)
+
+:yum::yum::yum::yum::yum::yum::yum: <br/>
+另外还有markdown emoji -> [emoji for markdown](https://www.webfx.com/tools/emoji-cheat-sheet/)
+
 **约束布局**
 
 >tips
